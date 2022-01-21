@@ -8,7 +8,6 @@
     <h1 class="h3 mb-0 text-gray-800">Products</h1>
 </div>
 
-
 <div class="card">
     <form action="" method="get" class="card-header">
         <div class="form-row justify-content-between">
@@ -55,6 +54,27 @@
                 </thead>
 
                 <tbody>
+                    {% for productvariant in productvariant_list %}
+                        <tr>
+                            <td>{{ productvariant.product.id }}</td>
+                            <td>{{ productvariant.product.title }}</td>
+                            <td>{{ productvariant.product.description }}</td>
+                            <td>{{ productvariant.variant_title }}</td>
+                            <td>
+                                <div class="btn-group btn-group-sm">
+                                    <a href="" class="btn btn-success">Edit</a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+<!--                    {% for product in product_list %}-->
+<!--                        <tr>-->
+<!--                            <td>{{ product.variant_title }}</td>-->
+<!--                            <td>{{ product.title }}</td>-->
+<!--                            <td>{{ product.description }}</td>-->
+<!--                        </tr>-->
+<!--                    {% endfor %}-->
+
                 <tr>
                     <td>1</td>
                     <td>T-Shirt <br> Created at : 25-Aug-2020</td>
